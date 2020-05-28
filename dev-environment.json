@@ -1,0 +1,6 @@
+{
+    "create_subscription": {
+        "TABLE_NAME": "subscriptions",
+        "TEMPLATE_NAME": "test-template"
+    }
+}

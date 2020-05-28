@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "email_verification_infrastructure"
+version = "0.1.0"
+description = ""
+authors = ["Joe Snell <joe.snell@daveramsey.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+"aws_cdk.core" = "^1.42.0"
+"aws_cdk.aws_dynamodb" = "^1.42.0"
+"aws_cdk.aws_ses" = "^1.42.0"
+"aws_cdk.aws_lambda" = "^1.42.0"
+"aws_cdk.aws_iam" = "^1.42.0"
+"aws_cdk.aws_apigateway" = "^1.42.0"
+
+[tool.poetry.dev-dependencies]
+boto3 = "^1.13.18"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

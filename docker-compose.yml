@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  db:
+    build:
+      context: .
+      target: database
+    command: /root/bin/start-db.sh
+    volumes:
+      - ./bin:/root/bin
+  api:
+    build:
+      context: .
+      target: api
+    command: /root/bin/start-api.sh
+    volumes:
+      - ./bin:/root/bin
+      - ${PWD}:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - STACK_NAME=email-verification-infrastructure
+
